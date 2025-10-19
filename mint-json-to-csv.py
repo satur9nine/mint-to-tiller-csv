@@ -24,10 +24,10 @@ if data:
     keys = sorted(keys)
 
     # Write to CSV
-    with open('output.csv', 'w', newline='') as f:
+    with open('transactions.csv', 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=keys, extrasaction='ignore')
         writer.writeheader()
         writer.writerows(data)
 
-    print(f"Successfully converted {len(data)} records to output.csv")
+    print(f"Successfully converted {len(data)} records to transactions.csv")
     print(f"Columns: {', '.join(keys)}")
